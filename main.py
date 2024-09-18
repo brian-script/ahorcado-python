@@ -92,7 +92,9 @@ while intentos < 6 and "_" in progreso:
     letra = str(input("Agrega una letra: "))
 
     if letra in adivinar:
-        print("Bien")
+        for i, l in enumerate(adivinar):
+            if l in letra:
+                progreso[i] = letra
     else:
         intentos = intentos + 1
         print("Fallaste")
